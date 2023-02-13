@@ -77,7 +77,7 @@ echo -e "\e[1m\e[32m3. Downloading and building binaries... \e[0m" && sleep 1
 # download binary
 mkdir -p $CORE_HOME/bin
 cd $HOME
-curl -LOf https://github.com/CoreumFoundation/coreum/releases/download/$CORE_VERSION/$CORE_BINARY_NAME
+curl -LOf https://github.com/CoreumFoundation/coreum/releases/download/v0.1.1/cored-linux-amd64
 mv $CORE_BINARY_NAME $CORE_HOME/bin/cored
 chmod +x $CORE_HOME/bin/*
 cored version
