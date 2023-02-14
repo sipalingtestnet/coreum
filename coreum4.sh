@@ -23,6 +23,8 @@ echo "================================================================="
 
 
 sleep 1
+
+
 PORT=52
 
 
@@ -31,7 +33,7 @@ source $HOME/.bash_profile
 
 # Set Vars
 if [ ! $NODENAME ]; then
-	 [ENTER YOUR NODE] > " NODENAME"
+	read -p "[ENTER YOUR NODE] > " NODENAME
 	echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
 fi
 echo ""
@@ -99,7 +101,7 @@ sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every
 sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.core/coreum-testnet-1/config/app.toml
 
 # Set minimum gas price
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0$DENOM\"/" $HOME/.core/coreum-testnet-1/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025utestcore\"/" $HOME/.core/coreum-testnet-1/config/app.toml
 
 # Enable snapshots
 sed -i -e "s/^snapshot-interval *=.*/snapshot-interval = \"2000\"/" $HOME/.core/coreum-testnet-1/config/app.toml
@@ -134,7 +136,7 @@ EOF
 
 
 # Register And Start Service
-sudo systemctl start cored
+sudo systemctl restart cored
 sudo systemctl daemon-reload
 sudo systemctl enable cored
 
