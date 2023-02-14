@@ -31,7 +31,7 @@ source $HOME/.bash_profile
 
 # Set Vars
 if [ ! $NODENAME ]; then
-	 [ENTER YOUR NODE] > " NODENAME
+	 [ENTER YOUR NODE] > " NODENAME"
 	echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
 fi
 echo ""
