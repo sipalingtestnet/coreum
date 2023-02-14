@@ -143,8 +143,8 @@ sudo systemctl daemon-reload
 sudo systemctl enable cored
 
 echo -e "\033[0;33m"
-echo -e "\e[1m\e[33DONE MASBRO\e[0m"
-echo -e "CHECK RUNNING LOGS : \e[1m\e[35mjournalctl -fu cored -o cat\e[0m"
+echo -e "\e[1m\e[33 DONE MASBRO\e[0m"
+echo -e "CHECK RUNNING LOGS : \e[1m\e[33mjournalctl -fu cored -o cat\e[0m"
 echo ""
 
 # End
